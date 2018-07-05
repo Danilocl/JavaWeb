@@ -1,9 +1,20 @@
 package model;
 
-public class Hospede {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity(name = "hospede")
+public class Hospede {
+	
+	@Column
 	private String nome;
+	@Id
+	@GeneratedValue
+	@Column(name = "idHospede")
 	private int id;
+	@Column
 	private int cpf;
 
 	public String getNome() {
@@ -18,7 +29,7 @@ public class Hospede {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

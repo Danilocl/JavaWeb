@@ -9,13 +9,18 @@ import javax.inject.Named;
 
 import model.Hospede;
 import model.dao.HospedeDAO;
+import model.dao.ReservaDAO;
+
+
+
 @Named(value = "controlHospede")
 @SessionScoped
 public class ControlHospede implements Serializable {
 	
 	@EJB
 	private HospedeDAO dao;
-	private Hospede hospede = new Hospede();
+	private Hospede hospede;
+		
 	
 	public void insert() {
 		dao.inserir(hospede);
@@ -35,14 +40,6 @@ public class ControlHospede implements Serializable {
 
 	public List<Hospede> listar() {
 		return dao.listAll();
-	}
-
-	public HospedeDAO getDao() {
-		return dao;
-	}
-
-	public void setDao(HospedeDAO dao) {
-		this.dao = dao;
 	}
 
 	public Hospede getHospede() {

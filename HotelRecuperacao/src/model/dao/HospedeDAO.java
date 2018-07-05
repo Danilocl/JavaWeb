@@ -1,12 +1,13 @@
 package model.dao;
 
-import javax.persistence.PersistenceContext;
-
 import model.Hospede;
+import model.Reservas;
 
-public class HospedeDAO extends DAOGeneric<Hospede> {
-
+public class HospedeDAO extends DAOGeneric<Hospede>{
+	
 	public HospedeDAO() {
-		persistence = Hospede.class;
+		persistence = Reservas.class;
+		
 	}
+
 }
