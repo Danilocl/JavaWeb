@@ -38,8 +38,8 @@ public class DAOGeneric<T> {
 
 	}
 
-	public void delete(Integer id) {
-		T obj = buscaPorId(id);
+	public void delete(T obj) {
+		obj = em.merge(obj);
 		em.remove(obj);
 	}
 

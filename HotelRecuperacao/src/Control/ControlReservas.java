@@ -42,8 +42,8 @@ public class ControlReservas {
 		} while (quartos.size() <= 30);
 	}
 
-	public void delete() {
-		dao.delete(reserva.getId());
+	public void delete(Reservas r) {
+		dao.delete(r);
 	}
 
 	public void update() {

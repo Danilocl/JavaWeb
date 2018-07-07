@@ -36,12 +36,12 @@ public class ControlQuarto implements Serializable {
 		} while(list.size() <= 30);
 	}
 	
-	public void delete() {
-		dao.delete(quarto.getNumero());
+	public void delete(Quarto q) {
+		dao.delete(q);
 	}
 	
-	public void update() {
-		dao.update(quarto);
+	public void update(Quarto q) {
+		dao.update(q);
 	}
 	
 	public Quarto buscaPorId() {
