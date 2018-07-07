@@ -6,7 +6,7 @@ import model.Reservas;
 public class HospedeDAO extends DAOGeneric<Hospede>{
 	
 	public HospedeDAO() {
-		persistence = Reservas.class;
+		persistence = Hospede.class;
 		
 	}
 

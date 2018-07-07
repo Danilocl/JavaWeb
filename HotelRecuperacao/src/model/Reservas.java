@@ -15,7 +15,7 @@ import javax.persistence.ManyToMany;
 public class Reservas {
 
 	@ManyToMany
-	@JoinTable(name = "vendas_produtos",
+	@JoinTable(name = "reservaQuarto",
 			joinColumns = @JoinColumn(name =  "idQuarto"),
 			inverseJoinColumns = @JoinColumn(name = "idReserva"))
 	private List<Quarto> quarto;	
