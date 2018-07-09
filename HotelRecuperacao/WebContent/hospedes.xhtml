@@ -30,12 +30,12 @@
 	    
 	    <h:form styleClass="dinamico">
 	    
-	    #{ controleHospede.getNewHospede() }
+	    #{ controlHospede.getNewHospede() }
 	    
-		  <b:dataTable value="#{controlHospede.listar()}" var="hospedes">
+		  <b:dataTable value="#{controlHospede.listar()}" var="hospede">
 		    <b:dataTableColumn value="#{hospede.id}" />
-		    <b:dataTableColumn value="#{hospedes.nome}" />
-		    <b:dataTableColumn value="#{hospedes.cpf}" />		    
+		    <b:dataTableColumn value="#{hospede.nome}" />
+		    <b:dataTableColumn value="#{hospede.cpf}" />		    
 		    <b:dataTableColumn label="Opções" style="width:150px">
 		    	<b:commandButton value="Remover" ajax="true" update="@(.dinamico)" look="danger" action="#{ controlHospede.delete(hospede) }" />
 		    </b:dataTableColumn>

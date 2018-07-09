@@ -30,7 +30,7 @@
 				  <b:dataTable value="#{controlQuarto.listar()}" var="quarto">
 				    <b:dataTableColumn value="#{quarto.numero}" />				    
 				    <b:dataTableColumn label="Opções" style="width:150px">
-				    	<b:commandButton value="ADD" ajax="true" look="primary" action="#{ controlReserva.insertQuarto(quarto) }" />
+				    	<b:commandButton value="ADD" ajax="true" look="primary" action="#{ controlReserva.insertQuarto() }" />
 				    </b:dataTableColumn>
 				  </b:dataTable>
 		    	</div>

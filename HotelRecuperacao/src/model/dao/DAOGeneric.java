@@ -11,7 +11,7 @@ import model.Reservas;
 
 public class DAOGeneric<T> {
 
-	@PersistenceContext(unitName = "HotelRec")
+	@PersistenceContext(unitName = "HotelDB")
 	protected EntityManager em;
 
 	protected Class persistence;

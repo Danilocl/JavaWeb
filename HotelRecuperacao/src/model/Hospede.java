@@ -15,7 +15,7 @@ public class Hospede {
 	@Column(name = "idHospede")
 	private int id;
 	@Column
-	private int cpf;
+	private String cpf;
 
 	public String getNome() {
 		return nome;
@@ -33,11 +33,11 @@ public class Hospede {
 		this.id = id;
 	}
 
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
