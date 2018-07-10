@@ -11,39 +11,39 @@ import model.Hospede;
 import model.Quarto;
 import model.dao.QuartoDAO;
 
-
 @Named(value = "controlQuarto")
 @SessionScoped
 public class ControlQuarto implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	@EJB
 	private QuartoDAO dao;
 	private List<Quarto> list;
-	private Quarto quarto;
-	
+	public Quarto quarto;
+
+	public void setQuarto(Quarto quarto) {
+		this.quarto = quarto;
+	}
+
 	public void getQuarto() {
 		quarto = new Quarto();
 		quarto.setNumero(null);
 	}
+
 	public void insert() {
 		list.add(quarto);
 		do {
-		dao.inserir(quarto);
-		} while(list.size() <= 30);
+			dao.inserir(quarto);
+		} while (list.size() <= 30);
 	}
-	
+
 	public void delete(Quarto q) {
 		dao.delete(q);
 	}
-	
+
 	public void update(Quarto q) {
 		dao.update(q);
 	}
-	
+
 	public Quarto buscaPorId() {
 		return dao.buscaPorId(quarto.getNumero());
 	}
@@ -52,5 +52,4 @@ public class ControlQuarto implements Serializable {
 		return dao.listAll();
 	}
 
-	
 }

@@ -37,7 +37,7 @@
 		    <b:dataTableColumn value="#{hospede.nome}" />
 		    <b:dataTableColumn value="#{hospede.cpf}" />		    
 		    <b:dataTableColumn label="Opções" style="width:150px">
-		    	<b:commandButton value="Remover" ajax="true" update="@(.dinamico)" look="danger" action="#{ controlHospede.delete(hospede) }" />
+		    	<b:commandButton value="Remover" ajax="true" update="@(.dinamico)" look="danger" action="#{ controlHospede.delete() }" />
 		    </b:dataTableColumn>
 		  </b:dataTable>
 		</h:form>

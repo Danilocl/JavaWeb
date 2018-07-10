@@ -20,7 +20,7 @@
 		<h:form styleClass="dinamico">
 		  <b:accordion contentDisabled="false">
 		    <b:panel title="Cadastrar Quartos">
-		    	<b:inputText value="#{ controlQuarto.Quarto.numero }" placeholder="Entre com o número do Quarto" label="Número do quarto:" /> <br/>		    			    
+		    	<b:inputText value="#{ controlQuarto.quarto.numero }" placeholder="Entre com o número do Quarto" label="Número do quarto:" /> <br/>		    			    
 		    	 <b:commandButton value="Cadastrar" ajax="true" update="@(.dinamico)" look="primary" action="#{ controlQuarto.insert() }"/>
 		    </b:panel>
 		  </b:accordion>
@@ -34,7 +34,7 @@
 		  <b:dataTable value="#{controlQuarto.listar()}" var="quarto">		    		    
 		    <b:dataTableColumn value="#{quarto.numero}" />		    
 		    <b:dataTableColumn label="Opções" style="width:150px">
-		    	<b:commandButton value="Remover" ajax="true" update="@(.dinamico)" look="danger" action="#{ controlQuarto.delete(quarto) }" />
+		    	<b:commandButton value="Remover" ajax="true" update="@(.dinamico)" look="danger" action="#{ quarto.delete() }" />
 		    </b:dataTableColumn>
 		  </b:dataTable>
 		</h:form>
